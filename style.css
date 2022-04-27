@@ -1,0 +1,79 @@
+body{
+	margin: 0;
+}
+
+.wrapper{
+	background-color: rgb(0, 0, 0);
+	display: grid;
+	position: absolute;
+	width:  100%;
+	height: 100%;
+	align-content: center;
+	justify-content: center;
+}
+
+.container{
+	/* 4:3 ratio; */
+	width: 640px;
+	height:  480px;
+	position: relative;
+	background-color: rgb(246, 127, 255);
+	transform-style: preserve-3d;
+	border-radius: 50px;
+	filter: blur(4px);
+	transition: filter 2s;
+}
+
+.container:hover{
+	filter: blur(0px);
+}
+
+.container h1{
+	color: white;
+}
+
+.front{
+	background-color: rgb(246, 127, 255);
+	color: black;
+	display: grid;
+	align-content: center;
+	justify-content: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transform: translateZ(1px);
+	z-index: 1;
+}
+
+.back{
+	background-color: rgb(246, 127, 255);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transform: rotateY(180deg) translateX(1px);
+}
+
+.back video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.anim{
+	animation-name: flip;
+	animation-duration: 5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes flip{
+	from{ transform: rotateY(0deg); }
+	to{ transform: rotateY(180deg); }
+}
+
+.choices{
+	visibility: hidden;
+}
