@@ -1,9 +1,9 @@
 body{
 	margin: 0;
+	background-image: url("chromatica-background.jpeg");
 }
 
 .wrapper{
-	background-color: rgb(0, 0, 0);
 	display: grid;
 	position: absolute;
 	width:  100%;
@@ -45,6 +45,7 @@ body{
 	height: 100%;
 	transform: translateZ(1px);
 	z-index: 1;
+
 }
 
 .back{
